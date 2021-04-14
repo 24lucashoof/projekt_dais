@@ -1,0 +1,13 @@
+C:\dev\DAIS_project\DAIS_project\bin\Debug\DAIS_project.exe.config
+C:\dev\DAIS_project\DAIS_project\bin\Debug\DAIS_project.exe
+C:\dev\DAIS_project\DAIS_project\bin\Debug\DAIS_project.pdb
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.csprojAssemblyReference.cache
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.Properties.Resources.resources
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.csproj.GenerateResource.cache
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.csproj.CoreCompileInputs.cache
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.exe
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.pdb
+C:\dev\DAIS_project\DAIS_project\bin\Debug\DataLayer.dll
+C:\dev\DAIS_project\DAIS_project\bin\Debug\DataLayer.pdb
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.Form1.resources
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.csproj.CopyComplete
