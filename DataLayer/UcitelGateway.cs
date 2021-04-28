@@ -69,6 +69,39 @@ namespace DataLayer
             return dt;
         }
 
+        public int test()
+        {
+            DataTable dt = new DataTable();
+            int _return_value = 0;
+
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "ucitel_nedekan";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        var output__ = command.Parameters.Add("@_output", SqlDbType.Int);
+                        output__.Direction = ParameterDirection.Output;
+                        command.ExecuteNonQuery();
+                        _return_value = Convert.ToInt32(output__.Value);
+
+                    }
+                }
+
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("Couldnt connect to the DB");
+            }
+
+            return _return_value;
+        }
+
     }
 
     public class Ucitel
@@ -136,6 +169,14 @@ namespace DataLayer
         {
             return ("id: " + ucitelID + " jmeno: " + jmeno + " prijmeni: " + prijmeni + " dekan: " + dekan + " infoID: " + infoID.email);
         }
+
+        public static int test()
+        {
+            UcitelGateway gtw = new UcitelGateway();
+            return gtw.test();
+        }
+
+
 
     }
 

@@ -26,9 +26,11 @@ namespace DAIS_project
             //foreach (Info i in info)
             //    listBox1.Items.Add(i);
 
-            //List<Ucitel> teachers = Ucitel.Find();
-            //foreach (Ucitel u in teachers)
-            //    listBox1.Items.Add(u);
+            List<Ucitel> teachers = Ucitel.Find();
+            foreach (Ucitel u in teachers)
+                listBox1.Items.Add(u);
+
+            listBox1.Items.Add(Ucitel.test());
 
             //List<Predmet> subjects = Predmet.Find();
             //foreach(Predmet p in subjects)
@@ -42,9 +44,9 @@ namespace DAIS_project
             //foreach (Zkousky z in exams)
             //    listBox1.Items.Add(z);
 
-            List<cas_vyucovani> study_times = cas_vyucovani.Find();
-            foreach (cas_vyucovani cv in study_times)
-                listBox1.Items.Add(cv);
+            //List<cas_vyucovani> study_times = cas_vyucovani.Find();
+            //foreach (cas_vyucovani cv in study_times)
+            //    listBox1.Items.Add(cv);
 
         }
 
