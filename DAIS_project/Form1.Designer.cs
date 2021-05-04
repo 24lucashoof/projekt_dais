@@ -30,6 +30,8 @@ namespace DAIS_project
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.zapsat_znamku_button = new System.Windows.Forms.Button();
+            this.button_vysveceni = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -41,11 +43,33 @@ namespace DAIS_project
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
+            // zapsat_znamku_button
+            // 
+            this.zapsat_znamku_button.Location = new System.Drawing.Point(179, 219);
+            this.zapsat_znamku_button.Name = "zapsat_znamku_button";
+            this.zapsat_znamku_button.Size = new System.Drawing.Size(75, 23);
+            this.zapsat_znamku_button.TabIndex = 1;
+            this.zapsat_znamku_button.Text = "Zapsat známku";
+            this.zapsat_znamku_button.UseVisualStyleBackColor = true;
+            this.zapsat_znamku_button.Click += new System.EventHandler(this.zapsat_znamku_button_Click);
+            // 
+            // button_vysveceni
+            // 
+            this.button_vysveceni.Location = new System.Drawing.Point(515, 219);
+            this.button_vysveceni.Name = "button_vysveceni";
+            this.button_vysveceni.Size = new System.Drawing.Size(75, 23);
+            this.button_vysveceni.TabIndex = 2;
+            this.button_vysveceni.Text = "Vysveceni";
+            this.button_vysveceni.UseVisualStyleBackColor = true;
+            this.button_vysveceni.Click += new System.EventHandler(this.button_vysveceni_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_vysveceni);
+            this.Controls.Add(this.zapsat_znamku_button);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +80,8 @@ namespace DAIS_project
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button zapsat_znamku_button;
+        private System.Windows.Forms.Button button_vysveceni;
     }
 }
 

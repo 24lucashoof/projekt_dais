@@ -54,5 +54,20 @@ namespace DAIS_project
         {
 
         }
+
+        private void zapsat_znamku_button_Click(object sender, EventArgs e)
+        {
+            ZapsatZnamkuForm form = new ZapsatZnamkuForm(this);
+            form.Show();
+            this.Hide();
+        }
+
+        // button_vysveceni
+        private void button_vysveceni_Click(object sender, EventArgs e)
+        {
+            VysveceniForm form = new VysveceniForm(this);
+            form.Show();
+            this.Hide();
+        }
     }
 }

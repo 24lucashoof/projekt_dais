@@ -102,6 +102,38 @@ namespace DataLayer
             return _return_value;
         }
 
+        public void zapsat_znamku(int studentID, int predmetID, int ucitelID, string znamka)
+        {
+            DataTable dt = new DataTable();
+            
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "zapsat_znamku";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        var student_id_ = command.Parameters.AddWithValue("@studentID", studentID);
+                        var predmet_id_ = command.Parameters.AddWithValue("@predmetID", predmetID);
+                        var ucitel_id_ = command.Parameters.AddWithValue("@ucitelID", ucitelID);
+                        var znamka_ = command.Parameters.AddWithValue("@znamka", znamka);
+
+                        command.ExecuteNonQuery();
+
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("Couldnt connect to the DB");
+            }
+        }
+
     }
 
     public class Ucitel
@@ -174,6 +206,12 @@ namespace DataLayer
         {
             UcitelGateway gtw = new UcitelGateway();
             return gtw.test();
+        }
+
+        public void zapsat_znamku(int studentID, int predmetID, string znamka)
+        {
+            UcitelGateway gtw = new UcitelGateway();
+            gtw.zapsat_znamku(studentID, predmetID, this.ucitelID, znamka);
         }
 
 

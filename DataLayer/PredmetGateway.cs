@@ -126,7 +126,7 @@ namespace DataLayer
 
         public override string ToString()
         {
-            return ("id: " + predmetID + " jmeno: " + jmeno + " zkratka: " + zkratka + " typ_predmetu: " + typ_predmetu + " jazyk: " + jazyk);
+            return predmetID.ToString();
         }
 
 

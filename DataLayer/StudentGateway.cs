@@ -70,6 +70,41 @@ namespace DataLayer
             return dt;
         }
 
+        public string vysveceni(int id)
+        {
+            DataTable dt = new DataTable();
+            string _return_value = "";
+
+            SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "vytvorit_vysveceni";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        var output__ = command.Parameters.Add("@o_prospech", SqlDbType.VarChar, 50);
+                        output__.Direction = ParameterDirection.Output;
+                        var student_id_ = command.Parameters.AddWithValue("@studentID", id);
+                        student_id_.Direction = ParameterDirection.Input;
+                        command.ExecuteNonQuery();
+                        _return_value = output__.Value.ToString();
+
+                    }
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("Couldnt connect to the DB");
+            }
+
+            return _return_value;
+        }
+
 
     }
 
@@ -130,9 +165,14 @@ namespace DataLayer
 
         public override string ToString()
         {
-            return ("id: " + studentID + " jmeno: " + jmeno + " prijmeni: " + prijmeni + " infoID: " + infoID.email + " rocnik: " + rocnik);
+            return studentID.ToString();
         }
 
+        public string vysveceni()
+        {
+            StudentGateway gtw = new StudentGateway();
+            return gtw.vysveceni(this.studentID);
+        }
 
     }
 
