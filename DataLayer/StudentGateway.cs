@@ -37,7 +37,7 @@ namespace DataLayer
 
             return dt;
         }
-        
+
         public DataTable FindByID(int id)
         {
             DataTable dt = new DataTable();
@@ -69,6 +69,62 @@ namespace DataLayer
 
             return dt;
         }
+
+        public void UpdateStudent(int id, string jmeno, string prijmeni)
+        { 
+            try
+            {
+                SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "UPDATE Student SET jmeno = @jmeno, prijmeni = @prijmeni WHERE studentID = @id";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+                        command.Parameters.AddWithValue("@jmeno", jmeno);
+                        command.Parameters.AddWithValue("@prijmeni", prijmeni);
+                        command.ExecuteScalar();
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldnt UPDATE student in the DB" + e.Message);
+            }
+
+        }
+
+        public void UpdateInfo(int infoID, string adresa, string telefon, string email)
+        {
+            try
+            {
+                SqlConnectionStringBuilder builder = DBConnector.GetBuilder();
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+                    connection.Open();
+                    string sql = "UPDATE Info SET adresa = @adresa, telefon = @telefon WHERE infoID = @infoID";
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@adresa", adresa);
+                        command.Parameters.AddWithValue("@telefon", telefon);
+                        command.Parameters.AddWithValue("@email", email);
+                        command.Parameters.AddWithValue("@infoID", infoID);
+                        command.ExecuteScalar();
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Couldnt UPDATE student_info in the DB" + e.Message);
+            }
+        }
+
+
 
         public string vysveceni(int id)
         {
@@ -172,6 +228,13 @@ namespace DataLayer
         {
             StudentGateway gtw = new StudentGateway();
             return gtw.vysveceni(this.studentID);
+        }
+
+        public void Update()
+        {
+            StudentGateway gtw = new StudentGateway();
+            gtw.UpdateStudent(studentID, jmeno, prijmeni);
+            gtw.UpdateInfo(infoID.infoID, infoID.adresa, infoID.telefon, infoID.email);
         }
 
     }

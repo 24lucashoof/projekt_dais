@@ -42,11 +42,11 @@ namespace DataLayer
 
     public class Zkousky
     {
-        Student studentID;
-        Predmet predmetID;
-        DateTime datum_zkousky;
-        string znamka;
-        Ucitel ucitelID;
+        public Student studentID;
+        public Predmet predmetID;
+        public DateTime datum_zkousky;
+        public string znamka;
+        public Ucitel ucitelID;
 
         public Zkousky(Student _studentID, Predmet _predmetID, DateTime _datum_zkousky, string _znamka, Ucitel _ucitelID)
         {

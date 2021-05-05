@@ -13,3 +13,4 @@ C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.Form1.resources
 C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.csproj.CopyComplete
 C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.ZapsatZnamkuForm.resources
 C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.VysveceniForm.resources
+C:\dev\DAIS_project\DAIS_project\obj\Debug\DAIS_project.StudentEditace.resources

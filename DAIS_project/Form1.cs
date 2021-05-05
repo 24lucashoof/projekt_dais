@@ -69,5 +69,13 @@ namespace DAIS_project
             form.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StudentEditace form = new StudentEditace(this);
+            this.Hide();
+            form.Show();
+
+        }
     }
 }

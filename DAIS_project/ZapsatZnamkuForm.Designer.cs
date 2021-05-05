@@ -33,19 +33,20 @@ namespace DAIS_project
             this.combobox_studentid = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.combobox_predmet = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textbox_znamka = new System.Windows.Forms.TextBox();
+            this.button_zpet = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -90,26 +91,16 @@ namespace DAIS_project
             this.groupBox1.Size = new System.Drawing.Size(211, 133);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Jmeno:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Prijmeni:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(88, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "label5";
             // 
             // label4
             // 
@@ -120,14 +111,23 @@ namespace DAIS_project
             this.label4.TabIndex = 2;
             this.label4.Text = "label4";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(88, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(20, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Prijmeni:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Jmeno:";
             // 
             // combobox_predmet
             // 
@@ -159,25 +159,15 @@ namespace DAIS_project
             this.groupBox2.Size = new System.Drawing.Size(214, 133);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
-            // label7
+            // label10
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 41);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Jmeno:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(19, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Zkratka";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(79, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "label10";
             // 
             // label9
             // 
@@ -188,14 +178,23 @@ namespace DAIS_project
             this.label9.TabIndex = 2;
             this.label9.Text = "label9";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(79, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "label10";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(19, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Zkratka";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(19, 41);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Jmeno:";
             // 
             // label11
             // 
@@ -214,11 +213,22 @@ namespace DAIS_project
             this.textbox_znamka.TabIndex = 8;
             this.textbox_znamka.TextChanged += new System.EventHandler(this.textbox_znamka_TextChanged);
             // 
+            // button_zpet
+            // 
+            this.button_zpet.Location = new System.Drawing.Point(459, 372);
+            this.button_zpet.Name = "button_zpet";
+            this.button_zpet.Size = new System.Drawing.Size(149, 41);
+            this.button_zpet.TabIndex = 9;
+            this.button_zpet.Text = "Zpet";
+            this.button_zpet.UseVisualStyleBackColor = true;
+            this.button_zpet.Click += new System.EventHandler(this.button_zpet_Click);
+            // 
             // ZapsatZnamkuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button_zpet);
             this.Controls.Add(this.textbox_znamka);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
@@ -259,5 +269,6 @@ namespace DAIS_project
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textbox_znamka;
+        private System.Windows.Forms.Button button_zpet;
     }
 }

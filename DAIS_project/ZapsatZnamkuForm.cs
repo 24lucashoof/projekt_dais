@@ -123,5 +123,12 @@ namespace DAIS_project
         {
             
         }
+
+        // button_zpet
+        private void button_zpet_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            form.Show();
+        }
     }
 }
